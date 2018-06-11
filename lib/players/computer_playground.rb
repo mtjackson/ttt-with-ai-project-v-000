@@ -1,6 +1,14 @@
 
 #module Players
 #  class Computer < Player
+#each time it plays, computer checks game.WIN_COMBINATIONS
+#first, check if computer has two values of a WIN_COMBINATIONS
+#if yes, computer should select the third value
+#second, check if other player has two values of a WIN_COMBINATIONS
+#if other player has two values, computer should select the third value
+#if other player has fewer than two values, computer should select value of
+#WIN_COMBINATIONS it has the most values of already
+#
     WIN_COMBINATIONS = [
       [0, 1, 2],
       [3, 4, 5],
