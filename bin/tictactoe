@@ -1,3 +1,58 @@
 #!/usr/bin/env ruby
 
 require_relative '../config/environment'
+require_relative '../lib/player'
+require_relative '../lib/game'
+require_relative '../lib/board'
+require_relative '../lib/players/computer'
+require_relative '../lib/players/human'
+
+
+puts "Welcome to Tic Tac Toe!"
+board = Board.new
+board.display
+sleep(0.5)
+puts "What kind of game do you want to play?"
+sleep(0.5)
+puts "(choose number of players: 1, 2, or 0 (computer only))"
+input = gets.strip
+sleep(0.5)
+i = input.to_i
+if i >= 0 && i <= 2
+  if i == 0
+    player_1 = Players::Computer.new("X")
+    player_2 = Players::Computer.new("O")
+    game = Game.new(player_1, player_2, board)
+    game.play
+  elsif i == 1
+    puts "Who should go first as X?"
+    sleep(0.5)
+    puts "(select 'me' or 'computer')"
+    input = gets.strip
+    sleep(0.5)
+    if input == 'me'
+      player_1 = Players::Human.new("X")
+      player_2 = Players::Computer.new("O")
+      game = Game.new(player_1, player_2, board)
+      game.play
+    elsif input == 'computer'
+      player_1 = Players::Computer.new("X")
+      player_2 = Players::Human.new("O")
+      game = Game.new(player_1, player_2, board)
+      game.board.display
+      game.play
+    else
+      puts "Please select a valid player ('me' or 'computer')"
+      input = gets.strip
+    end
+  elsif i == 2
+    player_1 = Players::Human.new("X")
+    player_2 = Players::Human.new("O")
+    game = Game.new(player_1, player_2, board)
+    game.play
+  end
+else
+  puts "Please choose a valid number of players"
+  puts "(choose number of players: 1, 2, or 0 (computer only))"
+  input = gets.strip
+end
