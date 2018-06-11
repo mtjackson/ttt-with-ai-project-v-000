@@ -28,7 +28,7 @@ def move(board)
   elsif board.turn_count >= 2
     my_pieces = []
     opps_pieces = []
-    i = 0
+    i = 0 # will give
     board.cells.collect do |cell|
       if cell == self.token
         my_pieces << i
