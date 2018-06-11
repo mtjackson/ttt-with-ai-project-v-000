@@ -38,7 +38,7 @@
           end
           x = (win_combination & opps_pieces)
           if x.length == 2
-            halt = win_combination - other_players_pieces
+            halt = win_combination - opps_pieces
             halt = halt[0]
             return halt.to_s
           else
