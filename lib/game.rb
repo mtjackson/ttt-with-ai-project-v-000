@@ -110,7 +110,7 @@ class Game
   def play
     until self.over?
       self.turn
-      sleep(0.5)
+      sleep(1)
     end
     if self.won?
       puts "Congratulations #{@winning_token}!"
