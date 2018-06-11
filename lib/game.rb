@@ -108,7 +108,6 @@ class Game
   end
 
   def play
-    self.board.display
     until self.over?
       self.turn
     end
