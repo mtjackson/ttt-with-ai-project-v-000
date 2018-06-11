@@ -3,5 +3,6 @@ class Player
 
   def initialize(token)
     @token = token
+    if @token == "X"
   end
 end
