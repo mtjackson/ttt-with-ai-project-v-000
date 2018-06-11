@@ -19,6 +19,7 @@ WIN_COMBINATIONS = [
   [2, 4, 6]
 ]
 def move(board)
+  if board.turn_count == 0
   if board.turn_count > 0
     my_pieces = []
     opps_pieces = []
@@ -65,12 +66,6 @@ def move(board)
         end
       end
     end
-  else
-    i = ""
-    until board.valid_move?(i)
-      i = rand(1..9).to_i
-    end
-    i.to_s
   end
 end
   end
