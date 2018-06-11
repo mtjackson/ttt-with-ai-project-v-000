@@ -7,5 +7,6 @@ class Player
       @opps_token = "O"
     else
       @opps_token = "X"
+    end
   end
 end

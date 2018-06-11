@@ -57,23 +57,23 @@ module Players
   #        end
   #      end
 
-        my_status.detect do |maybe_winning|
-          board.win_combinations.detect do |win_combination|
-            i = (win_combination - maybe_winning)
-            if i.length != 0
-              if board.valid_move?(i[0].to_s)
-                return i[0].to_s
-              end
-            end
-          end
-        end
-      else
-        i = ""
-        until board.valid_move?(i)
-          i = rand(1..9).to_i
-        end
-        i.to_s
-      end
+  #      my_status.detect do |maybe_winning|
+  #        board.win_combinations.detect do |win_combination|
+  #          i = (win_combination - maybe_winning)
+  #          if i.length != 0
+  #            if board.valid_move?(i[0].to_s)
+  #              return i[0].to_s
+  #            end
+  #          end
+  #        end
+  #      end
+  #    else
+  #      i = ""
+  #      until board.valid_move?(i)
+  #        i = rand(1..9).to_i
+  #      end
+  #      i.to_s
+  #    end
     end
   end
 end
