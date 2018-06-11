@@ -57,7 +57,7 @@
         end
 
         my_status.detect do |maybe_winning|
-          board.win_combinations.detect do |win_combination|
+          WIN_COMBINATIONS.detect do |win_combination|
             i = (win_combination - maybe_winning)
             if i.length != 0
               if board.valid_move?(i[0].to_s)
