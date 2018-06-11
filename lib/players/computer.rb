@@ -19,6 +19,8 @@ WIN_COMBINATIONS = [
   [2, 4, 6]
 ]
 def move(board)
+  my_pieces = [] # will result in an array of numbers equal to the index of a given X token
+  opps_pieces = []
   if board.turn_count < 2
     i = ""
     until board.valid_move?(i)
@@ -26,8 +28,6 @@ def move(board)
     end
     i.to_s
   elsif board.turn_count >= 2
-    my_pieces = [] # will result in an array of numbers equal to the index of a given X token
-    opps_pieces = []
     i = 0
     board.cells.collect do |cell|
       if cell == self.token
