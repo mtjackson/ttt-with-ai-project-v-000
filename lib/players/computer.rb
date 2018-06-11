@@ -26,7 +26,7 @@ def move(board)
     end
     i.to_s
   elsif board.turn_count >= 2
-    my_pieces = [] # will result in an array of numbers equal to the index of a given 
+    my_pieces = [] # will result in an array of numbers equal to the index of a given X token
     opps_pieces = []
     i = 0
     board.cells.collect do |cell|
@@ -40,7 +40,7 @@ def move(board)
         i += 1
       end
     end
-    my_status = []
+    my_status = [] #will result in a nested array of numbers equivilant to the index values
     other_status = []
     WIN_COMBINATIONS.select do |win_combination|
       i = (win_combination & my_pieces)
@@ -49,7 +49,7 @@ def move(board)
         final = final[0]
         return final.to_s
       else
-        my_status << i
+        my_status << i 
       end
       x = (win_combination & opps_pieces)
       if x.length == 2
