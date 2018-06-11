@@ -44,6 +44,8 @@ def move(board)
     other_status = []
     WIN_COMBINATIONS.select do |win_combination|
       i = (win_combination & my_pieces)
+      x = (win_combination & opps_pieces)
+
       if i.length == 2
         final = win_combination - my_pieces
         final = final[0]
@@ -51,7 +53,6 @@ def move(board)
       elsif i.length != 2
         my_status << i
       end
-      x = (win_combination & opps_pieces)
       if x.length == 2
         halt = win_combination - opps_pieces
         halt = halt[0]
