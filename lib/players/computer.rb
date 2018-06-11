@@ -19,7 +19,7 @@ WIN_COMBINATIONS = [
   [2, 4, 6]
 ]
 def move(board)
-  if board.turn_count == 0
+  if board.turn_count == 0 || board.turn_count == 1
     i = ""
     until board.valid_move?(i)
       i = rand(1..9).to_i
