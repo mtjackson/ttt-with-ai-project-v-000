@@ -6,5 +6,6 @@ class Player
     if @token == "X"
       @opps_token = "O"
     else
+      @opps_token = "X"
   end
 end
