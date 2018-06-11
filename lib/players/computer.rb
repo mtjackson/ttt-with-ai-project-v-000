@@ -40,8 +40,6 @@ def move(board)
         i += 1
       end
     end
-    my_status = [] #will result in a nested array of numbers equivilant to the index values computer is missing to win
-    other_status = []
     WIN_COMBINATIONS.select do |win_combination|
       i = (win_combination & my_pieces)
       x = (win_combination & opps_pieces)
