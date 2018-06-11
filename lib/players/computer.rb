@@ -21,6 +21,8 @@ WIN_COMBINATIONS = [
 def move(board)
   my_pieces = [] # will result in an array of numbers equal to the index of a given X token
   opps_pieces = []
+  my_status = [] #will result in a nested array of numbers equivilant to the index values computer is missing to win
+  other_status = []
   if board.turn_count < 2
     i = ""
     until board.valid_move?(i)
