@@ -37,7 +37,7 @@
         end
         my_status = []
         other_status = []
-        board.win_combinations.select do |win_combination|
+        WIN_COMBINATIONS.select do |win_combination|
           i = (win_combination & my_pieces)
           if i.length == 2
             final = win_combination - my_pieces
