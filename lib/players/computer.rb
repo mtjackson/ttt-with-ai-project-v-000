@@ -64,11 +64,11 @@ def move(board)
     my_status.detect do |maybe_winning|
       WIN_COMBINATIONS.detect do |win_combination|
         i = (win_combination - maybe_winning)
-        if i.length != 0
+    #    if i.length != 0
           if board.valid_move?(i[0].to_s)
             return i[0].to_s
           end
-        end
+    #    end
       end
     end
   end
