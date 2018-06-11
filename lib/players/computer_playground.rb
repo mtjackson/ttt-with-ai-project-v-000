@@ -12,7 +12,7 @@
       #
       if board.turn_count > 0
         my_pieces = []
-        other_players_pieces = []
+        opps_pieces = []
         i = 0
         board.cells.collect do |cell|
           if cell == self.token
