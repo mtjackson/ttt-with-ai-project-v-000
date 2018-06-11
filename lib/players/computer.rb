@@ -48,8 +48,8 @@ def move(board)
         final = win_combination - my_pieces
         final = final[0]
         return final.to_s
-  #    else
-  #      my_status << i
+      else
+        my_status << i
       end
       x = (win_combination & opps_pieces)
       if x.length == 2
