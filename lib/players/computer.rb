@@ -25,7 +25,7 @@ def move(board)
       i = rand(1..9).to_i
     end
     i.to_s
-  elsif board.turn_count > 0
+  elsif board.turn_count > 1
     my_pieces = []
     opps_pieces = []
     i = 0
