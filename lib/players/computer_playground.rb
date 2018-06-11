@@ -18,7 +18,7 @@
           if cell == self.token
             my_pieces << i
             i += 1
-          elsif cell != " "
+          elsif cell == @opps_token
             other_players_pieces << i
             i += 1
           else
