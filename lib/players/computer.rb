@@ -56,8 +56,8 @@ def move(board)
         halt = win_combination - opps_pieces
         halt = halt[0]
         return halt.to_s
-  #    else
-  #      other_status << x
+      else
+        other_status << x
       end
     end
 
