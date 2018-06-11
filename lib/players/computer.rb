@@ -62,7 +62,7 @@ def move(board)
     end
 
     my_status.detect do |maybe_winning|
-      WIN_COMBINATIONS.detect do |win_combination|
+      WIN_COMBINATIONS.select do |win_combination|
         i = (win_combination - maybe_winning)
     #    if i.length != 0
           if board.valid_move?(i[0].to_s)
