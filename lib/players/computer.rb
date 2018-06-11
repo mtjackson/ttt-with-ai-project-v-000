@@ -51,8 +51,10 @@ def move(board)
         if board.valid_move?(final.to_s)
           return final.to_s
         end
-      elsif i.length != 2
-        my_status << i
+      elsif x.length == 2
+        halt = win_combination - opps_pieces
+        halt = halt[0]
+        return halt.to_s
       else
         my_status << i
         other_status << x
