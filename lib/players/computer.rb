@@ -28,7 +28,7 @@ def move(board)
         my_pieces << i
         i += 1
       elsif cell == self.opps_token
-        other_players_pieces << i
+        opps_pieces << i
         i += 1
       else
         i += 1
