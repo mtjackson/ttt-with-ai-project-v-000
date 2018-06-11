@@ -36,7 +36,7 @@
           else
             my_status << i
           end
-          x = (win_combination & other_players_pieces)
+          x = (win_combination & opps_pieces)
           if x.length == 2
             halt = win_combination - other_players_pieces
             halt = halt[0]
