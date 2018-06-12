@@ -56,7 +56,7 @@ def move(board)
         halt = win_combination - opps_pieces
         halt_move = halt[0]
         if board.valid_move?(halt_move.to_s)
-          return halt[0].to_s
+          return halt_move.to_s
           break
         end
       else
