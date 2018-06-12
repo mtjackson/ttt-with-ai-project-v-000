@@ -49,7 +49,7 @@ def move(board)
         final = win_combination - my_pieces
         final_move = final[0]
         if board.valid_move?(final_move.to_s)
-          return final[0].to_s
+          return final_move.to_s
           break
         end
       elsif x.length == 2
