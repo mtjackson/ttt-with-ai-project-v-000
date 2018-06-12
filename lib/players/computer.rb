@@ -57,6 +57,7 @@ def move(board)
       #  halt = halt[0]
         if board.valid_move?(halt[0].to_s)
           return halt[0].to_s
+          break
         end
       else
         my_status << i
