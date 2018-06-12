@@ -42,7 +42,7 @@ def move(board)
         i += 1
       end
     end
-    WIN_COMBINATIONS.each do |win_combination|
+    WIN_COMBINATIONS.detect do |win_combination|
       i = (win_combination & my_pieces)
       x = (win_combination & opps_pieces)
       if i.length == 2
