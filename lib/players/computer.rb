@@ -42,14 +42,14 @@ def move(board)
         i += 1
       end
     end
-    WIN_COMBINATIONS.select do |win_combination|
+    WIN_COMBINATIONS.each do |win_combination|
       i = (win_combination & my_pieces)
       x = (win_combination & opps_pieces)
       if i.length == 2
         final = win_combination - my_pieces
     #    final = final[0]
-        if board.valid_move?(final.to_s)
-          return final.to_s
+        if board.valid_move?(final[0].to_s)
+          return final[0].to_s
         end
       elsif x.length == 2
         halt = win_combination - opps_pieces
